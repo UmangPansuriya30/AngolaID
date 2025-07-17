@@ -1,7 +1,14 @@
 {
   "expo": {
+    "scheme": "AngolaID",
     "name": "AngolaID",
     "slug": "AngolaID",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "plugins": [
+      "expo-router"
+    ],
+    "android": {
+      "package": "com.anonymous.AngolaID"
+    }
   }
 }

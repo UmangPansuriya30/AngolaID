@@ -1,4 +1,4 @@
-package com.angolaid
+package com.anonymous.AngolaID
 
 import android.app.Application
 import android.content.res.Configuration
