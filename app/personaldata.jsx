@@ -21,6 +21,7 @@ import { router, useLocalSearchParams } from 'expo-router';
 
 export default function PersonalDataScreen() {
     const { validationType } = useLocalSearchParams();
+
     const [phoneNumber, setPhoneNumber] = useState('+244');
     const [profession, setProfession] = useState('');
     const [isRecaptchaVerified, setIsRecaptchaVerified] = useState(false);
@@ -82,8 +83,8 @@ export default function PersonalDataScreen() {
                 profession,
                 isRecaptchaVerified,
             };
-            
-            router.push({ pathname: '/documentcapture', params: { userData } });
+
+            router.push({ pathname: '/documentcapture', params: { user: JSON.stringify(userData) } });
         } else {
             Alert.alert(
                 'Dados Incompletos',
@@ -109,7 +110,7 @@ export default function PersonalDataScreen() {
                             profession,
                             isRecaptchaVerified: true, // Skip recaptcha for demo
                         };
-                        router.push({pathname:'/documentcapture', params: { userData }});
+                        router.push({ pathname: '/documentcapture', params: { user: JSON.stringify(userData) }});
                     }
                 },
             ]

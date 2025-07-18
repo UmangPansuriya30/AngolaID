@@ -1,14 +1,27 @@
 {
-  "expo": {
-    "scheme": "AngolaID",
-    "name": "AngolaID",
-    "slug": "AngolaID",
-    "version": "1.0.0",
-    "plugins": [
-      "expo-router"
-    ],
-    "android": {
-      "package": "com.anonymous.AngolaID"
+    "expo": {
+        "scheme": "AngolaID",
+        "name": "AngolaID",
+        "slug": "AngolaID",
+        "version": "1.0.0",
+        "plugins": [
+            "expo-router"
+        ],
+        "android": {
+            "package": "com.anonymous.AngolaID",
+            "permissions": [
+                "CAMERA",
+                "RECORD_AUDIO",
+                "READ_EXTERNAL_STORAGE",
+                "WRITE_EXTERNAL_STORAGE"
+            ]
+        },
+        "ios": {
+            "infoPlist": {
+                "NSCameraUsageDescription": "This app needs access to the camera to take photos",
+                "NSMicrophoneUsageDescription": "This app needs access to the microphone for video recording",
+                "NSPhotoLibraryAddUsageDescription": "This app needs access to save captured photos"
+            }
+        }
     }
-  }
 }

@@ -10,7 +10,7 @@ import {
     ScrollView,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import {LinearGradient} from 'react-native-linear-gradient';
+import { LinearGradient } from 'react-native-linear-gradient';
 import { Colors } from '../src/constants/Colors';
 import { FontSize, Spacing, BorderRadius, wp, hp } from '../src/constants/Dimensions';
 
@@ -23,7 +23,7 @@ export default function ValidationTypeScreen() {
 
     const handleContinue = () => {
         if (selectedType) {
-            router.push({ pathname: '/personaldata', params: { selectedType: selectedType } });
+            router.push({ pathname: '/personaldata', params: { validationType: selectedType } });
         }
     };
     const handleSkipToDashboard = () => {
