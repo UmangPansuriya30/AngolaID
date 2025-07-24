@@ -1,13 +1,8 @@
 import { Link } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-// import { NavigationContainer } from '@react-navigation/native';
-// import { createStackNavigator } from '@react-navigation/stack';
-// import { StatusBar, StyleSheet } from 'react-native';
-// import { SafeAreaProvider } from 'react-native-safe-area-context';
-// import WelcomeScreen from "./src/screens/WelcomeScreen"
 
-export default function Index() {
+export default function helloWorld() {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Hello World</Text>
@@ -34,39 +29,3 @@ const styles = StyleSheet.create({
         marginTop: 20,
     },
 });
-
-// const Stack = createStackNavigator();
-// const App = () => {
-//     return (
-//         <SafeAreaProvider>
-//             <StatusBar barStyle="dark-content" backgroundColor="#FFFFFF" />
-//             <NavigationContainer>
-//                 <Stack.Navigator
-//                     initialRouteName="Welcome"
-//                     screenOptions={{
-//                         headerStyle: {
-//                             backgroundColor: '#FFFFFF',
-//                             elevation: 0,
-//                             shadowOpacity: 0,
-//                             borderBottomWidth: 0,
-//                         },
-//                         headerTintColor: '#333333',
-//                         headerTitleStyle: {
-//                             fontWeight: '600',
-//                             fontSize: 18,
-//                         },
-//                         headerBackTitleVisible: false,
-//                         gestureEnabled: true,
-//                     }}>
-//                     <Stack.Screen
-//                         name="Welcome"
-//                         component={WelcomeScreen}
-//                         options={{ headerShown: false }}
-//                     />
-//                 </Stack.Navigator>
-//             </NavigationContainer>
-//         </SafeAreaProvider>
-//     )
-// }
-
-// export default App

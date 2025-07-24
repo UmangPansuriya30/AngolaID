@@ -311,7 +311,7 @@ import { Camera, useCameraDevices } from 'react-native-vision-camera';
 import { Colors } from '../src/constants/Colors';
 import { FontSize, Spacing, BorderRadius } from '../src/constants/Dimensions';
 import { GlobalStyles } from '../src/styles/GlobalStyles';
-import { Link, router, useLocalSearchParams } from 'expo-router';
+import { router, useLocalSearchParams } from 'expo-router';
 import StepIndicator from '../src/components/StepIndicator';
 import DocumentFrame from '../src/components/DocumentFrame';
 import QRCodeScanner from '../src/components/QRCodeScanner';
@@ -413,7 +413,8 @@ export default function DocumentCapture() {
                 qrData: qrData,
             },
         };
-        router.navigate({ pathname: '/FacialRecognition', params: { userData: JSON.stringify(documentData) } });
+        // router.navigate({ pathname: '/FacialRecognition', params: { user: JSON.stringify(documentData) } });
+        router.navigate({ pathname: '/voicecapture', params: { user: JSON.stringify(documentData) } });
     };
 
     const handleRetake = () => {
@@ -529,13 +530,14 @@ export default function DocumentCapture() {
                             </TouchableOpacity>
                         </>
                     )}
+                    {/* temporary button to bypass */}
                     {currentStep === 'qr' && (
                         <>
                             <TouchableOpacity
                                 style={styles.secondaryButton}
                                 onPress={() => {
                                     router.push({
-                                        pathname: '/facialrecognition', params: {
+                                        pathname: '/voicecapture', params: {
                                             user: JSON.stringify({
                                                 ...userData,
                                                 documents: {

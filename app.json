@@ -5,7 +5,8 @@
         "slug": "AngolaID",
         "version": "1.0.0",
         "plugins": [
-            "expo-router"
+            "expo-router",
+            "react-native-vision-camera"
         ],
         "android": {
             "package": "com.anonymous.AngolaID",
